@@ -18,7 +18,7 @@ It allows users to explore listings, add their own places, leave reviews, and ma
 *Frontend:* EJS, HTML, CSS, Bootstrap  
 *Backend:* Node.js, Express.js  
 *Database:* MongoDB Atlas 
-*Authentication:** Passport.js
+*Authentication:* Passport.js
 *Hosting:* Render (Server)
 
 ## ⚙️ Installation and Setup
@@ -26,18 +26,18 @@ It allows users to explore listings, add their own places, leave reviews, and ma
 1. Clone this repository  
    ```bash
    git clone https://github.com/anjali-1106/wanderlust-mern.git
-2.Go into project folder
+2. Go into project folder
    cd wanderlust-mern
-3.Install dependencies
+3. Install dependencies
   npm install
 4. Create a .env file in the root directory and add:
    MONGO_URL=your_mongodb_connection_string
   SECRET=your_secret_key
   CLOUDINARY_CLOUD_NAME=your_cloud_name
   CLOUDINARY_KEY=your_key
- CLOUDINARY_SECRET=your_secret
-5.Run the project
- npm start
+  CLOUDINARY_SECRET=your_secret
+5. Run the project
+   npm start
 
 ## Author
 Anjali Chaudhari 
