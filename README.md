@@ -27,16 +27,20 @@ It allows users to explore listings, add their own places, leave reviews, and ma
    ```bash
    git clone https://github.com/anjali-1106/wanderlust-mern.git
 2. Go into project folder
-   cd wanderlust-mern
-3. Install dependencies
+     ```bash
+    cd wanderlust-mern
+4. Install dependencies
+     ```bash
   npm install
-4. Create a .env file in the root directory and add:
+6. Create a .env file in the root directory and add
+    ```bash
    MONGO_URL=your_mongodb_connection_string
-  SECRET=your_secret_key
-  CLOUDINARY_CLOUD_NAME=your_cloud_name
-  CLOUDINARY_KEY=your_key
-  CLOUDINARY_SECRET=your_secret
-5. Run the project
+    SECRET=your_secret_key
+    CLOUDINARY_CLOUD_NAME=your_cloud_name
+   CLOUDINARY_KEY=your_key
+   CLOUDINARY_SECRET=your_secret
+7. Run the project
+ ```bash
    npm start
 
 ## Author
