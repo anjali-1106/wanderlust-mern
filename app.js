@@ -38,7 +38,7 @@ main().then(()=>{
 });
 async function main(){
     await mongoose.connect(dbUrl);
-   // await mongoose.connect(Mongo_Url);
+    //await mongoose.connect(Mongo_Url);
 }
 
 app.set("view engine","ejs");
@@ -52,7 +52,7 @@ app.use(express.json());
 const store= MongoStore.create({
      mongoUrl: dbUrl,
      crypto: {
-        secret:"mysupersecretecode"
+        secret:process.env.SECRET,
      },
      touchAfter:24*3600,
 });
@@ -62,7 +62,7 @@ store.on("error",()=>{
 
 const sessionOptions={
     store,
-    secret:"mysupersecretecode",
+    secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
     Cookie:{
@@ -165,9 +165,10 @@ app.get("/listings/:id",listingController.showListing);/*async(req,res)=>{
    const listing=req.body;
    console.log(listing);
 });*/
-app.post("/listings", upload.none(), isLoggedIn,listingController.createListing);/*async (req, res) => {
+
+app.post("/listings", upload.none(), isLoggedIn,listingController.createListing);// /*async (req, res) => {
   //console.log(req.body); // check this - it should now have title
-  try {
+  /*try {
     const listing = new Listing(req.body.listing);
     listing.owner=req.user._id;
     await listing.save();
